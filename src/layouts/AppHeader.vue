@@ -7,12 +7,12 @@ import LogoIcon from "../components/icons/LogoIcon.vue";
 <template>
   <header>
     <div class="container extended-bar">
-      <a class="search"><MagnifierIcon :size="16" classProp="icon" />Search</a>
+      <a class="search"><MagnifierIcon :size="16" class="icon" />Search</a>
       <a class="learn" href="/our-network?service=learn">Learn</a>
       <a class="donate" href="/our-network?service=donate">Donate</a>
     </div>
     <div class="container navbar">
-      <LogoIcon classProp="logo" :size="216" />
+      <LogoIcon class="logo" :size="216" />
 
       <div class="wrapper">
         <nav>
