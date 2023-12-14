@@ -1,4 +1,12 @@
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+import vue from "@astrojs/vue";
+
+export default defineConfig({
+  site: 'https://good-things-astro.com/',
+  server: {
+    host: true,
+    port: 3000
+  },
+  integrations: [vue()]
+});
