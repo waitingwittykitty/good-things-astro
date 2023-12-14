@@ -1,0 +1,51 @@
+---
+import { whatWeDoData } from "../config/staticData";
+import ProductCard from "../components/share/ProductCard.vue";
+import Layout from "../layouts/Page.astro";
+
+const { title, description, products } = whatWeDoData;
+---
+
+<Layout>
+  <main class="container">
+    <h2>{ title }</h2>
+    <p>{ description }</p>
+    <div class="grid">
+      {products.map(product => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style scoped>
+  h2 {
+    margin-top: 4rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--color-primary);
+    gap: 4rem;
+    padding: 4rem;
+  }
+
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
