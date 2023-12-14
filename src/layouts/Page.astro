@@ -1,0 +1,16 @@
+---
+import Layout from "./Base.astro";
+import type { Props as BaseHeadProps } from "../components/head/BaseHead.astro";
+import AppHeader from "./AppHeader.vue";
+
+export interface Props {
+  seo?: BaseHeadProps;
+}
+
+const { seo } = Astro.props as Props;
+---
+
+<Layout seo={seo}>
+  <AppHeader slot="header" />
+  <slot />
+</Layout>
