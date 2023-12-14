@@ -11,7 +11,9 @@ export default defineConfig({
   integrations: [
     vue({
       template: {
-        transformAssetUrls: false,
+        transformAssetUrls: {
+          includeAbsolute: false,
+        },
       },
     }),
   ],

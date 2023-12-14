@@ -9,7 +9,7 @@ defineProps({
   <img
     :class="classProp"
     alt="Magnifier"
-    src="../../assets/icons/magnifier.svg"
+    src="/magnifier.svg"
     :width="size"
     height="auto"
   />

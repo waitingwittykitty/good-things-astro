@@ -9,7 +9,7 @@ defineProps({
   <img
     :class="classProp"
     alt="Logo"
-    src="../../assets/logo.png"
+    src="/logo.png"
     :width="size"
     height="auto"
   />
