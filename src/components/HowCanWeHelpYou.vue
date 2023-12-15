@@ -1,13 +1,16 @@
 <script setup>
 import { ref } from "vue";
 
-import { homepageData } from "../config/staticData";
 import StandardSelect from "./share/StandardSelect.vue";
 import AppButton from "./share/AppButton.vue";
 
+const { data } = defineProps({
+  data: Object
+})
+
 const {
   howCanWeHelpYou: { title, description, roles, services, callToAction },
-} = homepageData;
+} = data;
 const role = ref(roles?.[0].value);
 const service = ref(services?.[0].value);
 

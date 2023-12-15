@@ -1,8 +1,11 @@
 <script setup>
 import AppButton from "./share/AppButton.vue";
-import { homepageData } from "../config/staticData";
 
-const { banner, subBanner } = homepageData;
+const { data } = defineProps({
+  data: Object
+})
+
+const { banner, subBanner } = data;
 </script>
 
 <template>

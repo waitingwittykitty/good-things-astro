@@ -1,11 +1,14 @@
 <script setup>
-import { homepageData } from "../config/staticData";
 import ProductCard from "./share/ProductCard.vue";
 import AppButton from "./share/AppButton.vue";
 
+const { data } = defineProps({
+  data: Object
+})
+
 const {
   whatDoWeDo: { title, description, products, callToAction },
-} = homepageData;
+} = data;
 
 </script>
 
